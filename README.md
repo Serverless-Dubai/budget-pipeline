@@ -27,6 +27,15 @@ We have a Lambda function and that's great, but right now we don't have any way 
 
 Let's fix that by adding the rest-api component to our `serverless.yml` file.
 
+### Step 4
+So we have a function to process our data, and a way to invoke it, but at the moment we're
+just sending JSON back to the caller rather than storing it somewhere. That's not how
+an analytics pipeline would work, even a budget one.
+
+After processing and transforming our data, let's store it in a DynamoDB table. It's
+lightning fast, and we'll only pay for what we use. Luckily, there's a dynamodb component;
+let's add it to the `serverless.yml` file.
+
 ## Deployment
 To deploy our component, run `components deploy`.
 

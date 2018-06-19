@@ -133,5 +133,91 @@
         "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/data"
       ]
     }
+  },
+  "budget-pipeline:analyticsDb": {
+    "instanceId": "ftuqpkxjx5-tj7bxeaw",
+    "type": "aws-dynamodb",
+    "internallyManaged": false,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-dynamodb",
+    "inputs": {
+      "region": "us-east-1",
+      "tables": [
+        {
+          "name": "analytics-ftuqpkxjx5",
+          "hashKey": "id",
+          "indexes": [
+            {
+              "name": "DataIdIndex",
+              "type": "global",
+              "hashKey": "id"
+            }
+          ],
+          "schema": {
+            "id": "number",
+            "datapoint": "string"
+          },
+          "options": {
+            "timestamps": true
+          }
+        }
+      ]
+    },
+    "state": {
+      "ddbtables": [
+        {
+          "analytics-ftuqpkxjx5": {
+            "TableDescription": {
+              "AttributeDefinitions": [
+                {
+                  "AttributeName": "id",
+                  "AttributeType": "N"
+                }
+              ],
+              "TableName": "analytics-ftuqpkxjx5",
+              "KeySchema": [
+                {
+                  "AttributeName": "id",
+                  "KeyType": "HASH"
+                }
+              ],
+              "TableStatus": "CREATING",
+              "CreationDateTime": "2018-06-19T16:29:14.569Z",
+              "ProvisionedThroughput": {
+                "NumberOfDecreasesToday": 0,
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1
+              },
+              "TableSizeBytes": 0,
+              "ItemCount": 0,
+              "TableArn": "arn:aws:dynamodb:us-east-1:845404844455:table/analytics-ftuqpkxjx5",
+              "TableId": "0ea68370-3fbf-4740-86b2-12e6f21081f1",
+              "GlobalSecondaryIndexes": [
+                {
+                  "IndexName": "DataIdIndex",
+                  "KeySchema": [
+                    {
+                      "AttributeName": "id",
+                      "KeyType": "HASH"
+                    }
+                  ],
+                  "Projection": {
+                    "ProjectionType": "ALL"
+                  },
+                  "IndexStatus": "CREATING",
+                  "ProvisionedThroughput": {
+                    "NumberOfDecreasesToday": 0,
+                    "ReadCapacityUnits": 1,
+                    "WriteCapacityUnits": 1
+                  },
+                  "IndexSizeBytes": 0,
+                  "ItemCount": 0,
+                  "IndexArn": "arn:aws:dynamodb:us-east-1:845404844455:table/analytics-ftuqpkxjx5/index/DataIdIndex"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
   }
 }

@@ -27,4 +27,19 @@ components:
           post: # HTTP method names are used to attach handlers
             function: ${processData}
             cors: true
-  
+  analyticsDb:
+    type: aws-dynamodb
+    inputs: 
+      region: us-east-1
+      tables:
+        - name: analytics-${self.serviceId}
+          hashKey: id
+          indexes:
+            - name: DataIdIndex
+              type: global
+              hashKey: id
+          schema:
+            id: number
+            datapoint: string
+          options:
+            timestamps: true
