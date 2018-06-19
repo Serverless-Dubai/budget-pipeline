@@ -1,5 +1,5 @@
 # Budget Pipeline example for Dubai Serverless User Group/Meetup.
-# Created by Rob Sutter <rob.sutter@protonmail.com> on 19 June 2018.
+# Created by Rob Sutter <rob.sutter@pm.me> on 19 June 2018.
 # Based on Serverless Components repo at https://github.com/serverless/components
 
 type: budget-pipeline
@@ -11,21 +11,23 @@ inputTypes: # type descriptions for inputs that budget-pipeline expects to recei
     default: my-budget-pipeline
 
 components:
-  processData:
+  analyzeData:
     type: aws-lambda
     inputs:
       memory: 512
-      timeout: 10
-      handler: data.process
+      timeout: 100
+      handler: data.analyze
       root: ${self.path}/code
-  processorApi:
+      env:
+        analyticsTableName: analytics-${self.serviceId}
+  analysisApi:
     type: rest-api
     inputs:
       gateway: aws-apigateway
       routes:
         /data: # routes begin with a slash
           post: # HTTP method names are used to attach handlers
-            function: ${processData}
+            function: ${analyzeData}
             cors: true
   analyticsDb:
     type: aws-dynamodb

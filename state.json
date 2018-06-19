@@ -9,34 +9,9 @@
     "instanceId": "ftuqpkxjx5-rt12yxi7"
   },
   "budget-pipeline:processData": {
-    "instanceId": "ftuqpkxjx5-m2s9k9d4",
     "type": "aws-lambda",
-    "internallyManaged": false,
-    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-lambda",
-    "inputs": {
-      "memory": 512,
-      "timeout": 10,
-      "handler": "data.process",
-      "root": "/Users/rob/source/kinesis-pipeline/code",
-      "name": "func-ftuqpkxjx5-m2s9k9d4"
-    },
-    "state": {
-      "memory": 512,
-      "timeout": 10,
-      "handler": "data.process",
-      "root": "/Users/rob/source/kinesis-pipeline/code",
-      "name": "func-ftuqpkxjx5-m2s9k9d4",
-      "arn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
-      "roleArn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
-      "defaultRole": {
-        "arn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
-        "service": "lambda.amazonaws.com",
-        "policy": {
-          "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
-        },
-        "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role"
-      }
-    }
+    "state": {},
+    "instanceId": "ftuqpkxjx5-hbuzw376"
   },
   "budget-pipeline:processData:defaultRole": {
     "instanceId": "ftuqpkxjx5-9fq8o0cp",
@@ -44,42 +19,20 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
     "inputs": {
-      "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role",
+      "name": "func-ftuqpkxjx5-9620yt2t-execution-role",
       "service": "lambda.amazonaws.com"
     },
     "state": {
-      "arn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
-      "service": "lambda.amazonaws.com",
-      "policy": {
-        "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
-      },
-      "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role"
+      "name": null,
+      "arn": null,
+      "service": null,
+      "policy": null
     }
   },
   "budget-pipeline:processorApi": {
-    "instanceId": "ftuqpkxjx5-t5qr39hk",
     "type": "rest-api",
-    "internallyManaged": false,
-    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/rest-api",
-    "inputs": {
-      "gateway": "aws-apigateway",
-      "routes": {
-        "/data": {
-          "post": {
-            "function": {
-              "arn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
-              "roleArn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role"
-            },
-            "cors": true
-          }
-        }
-      },
-      "name": "api-ftuqpkxjx5-t5qr39hk"
-    },
-    "state": {
-      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
-      "url": "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/"
-    }
+    "state": {},
+    "instanceId": "ftuqpkxjx5-gnwe7hvo"
   },
   "budget-pipeline:processorApi:iam": {
     "instanceId": "ftuqpkxjx5-fssv5ptb",
@@ -87,16 +40,14 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
     "inputs": {
-      "name": "api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "name": "api-ftuqpkxjx5-ssjnoyfb-iam-role",
       "service": "apigateway.amazonaws.com"
     },
     "state": {
-      "arn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
-      "service": "apigateway.amazonaws.com",
-      "policy": {
-        "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
-      },
-      "name": "api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk"
+      "name": null,
+      "arn": null,
+      "service": null,
+      "policy": null
     }
   },
   "budget-pipeline:processorApi:apig": {
@@ -105,119 +56,66 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-apigateway",
     "inputs": {
-      "name": "api-ftuqpkxjx5-t5qr39hk",
-      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
-      "routes": {
-        "data": {
-          "POST": {
-            "lambdaArn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
-            "cors": true
-          }
-        }
-      }
+      "name": "api-ftuqpkxjx5-ssjnoyfb",
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-ssjnoyfb-iam-role-ftuqpkxjx5-ssjnoyfb",
+      "routes": {}
     },
-    "state": {
-      "name": "api-ftuqpkxjx5-t5qr39hk",
-      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
-      "routes": {
-        "data": {
-          "POST": {
-            "lambdaArn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
-            "cors": true
-          }
-        }
-      },
-      "id": "z79oylgvk2",
-      "url": "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/",
-      "urls": [
-        "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/data"
-      ]
-    }
+    "state": {}
   },
   "budget-pipeline:analyticsDb": {
-    "instanceId": "ftuqpkxjx5-tj7bxeaw",
     "type": "aws-dynamodb",
-    "internallyManaged": false,
-    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-dynamodb",
+    "state": {}
+  },
+  "budget-pipeline:analyzeData": {
+    "type": "aws-lambda",
+    "state": {}
+  },
+  "budget-pipeline:analysisApi": {
+    "type": "rest-api",
+    "state": {}
+  },
+  "budget-pipeline:analyzeData:defaultRole": {
+    "instanceId": "ftuqpkxjx5-uwtqka8j",
+    "type": "aws-iam-role",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
     "inputs": {
-      "region": "us-east-1",
-      "tables": [
-        {
-          "name": "analytics-ftuqpkxjx5",
-          "hashKey": "id",
-          "indexes": [
-            {
-              "name": "DataIdIndex",
-              "type": "global",
-              "hashKey": "id"
-            }
-          ],
-          "schema": {
-            "id": "number",
-            "datapoint": "string"
-          },
-          "options": {
-            "timestamps": true
-          }
-        }
-      ]
+      "name": "func-ftuqpkxjx5-6posf6l8-execution-role",
+      "service": "lambda.amazonaws.com"
     },
     "state": {
-      "ddbtables": [
-        {
-          "analytics-ftuqpkxjx5": {
-            "TableDescription": {
-              "AttributeDefinitions": [
-                {
-                  "AttributeName": "id",
-                  "AttributeType": "N"
-                }
-              ],
-              "TableName": "analytics-ftuqpkxjx5",
-              "KeySchema": [
-                {
-                  "AttributeName": "id",
-                  "KeyType": "HASH"
-                }
-              ],
-              "TableStatus": "CREATING",
-              "CreationDateTime": "2018-06-19T16:29:14.569Z",
-              "ProvisionedThroughput": {
-                "NumberOfDecreasesToday": 0,
-                "ReadCapacityUnits": 1,
-                "WriteCapacityUnits": 1
-              },
-              "TableSizeBytes": 0,
-              "ItemCount": 0,
-              "TableArn": "arn:aws:dynamodb:us-east-1:845404844455:table/analytics-ftuqpkxjx5",
-              "TableId": "0ea68370-3fbf-4740-86b2-12e6f21081f1",
-              "GlobalSecondaryIndexes": [
-                {
-                  "IndexName": "DataIdIndex",
-                  "KeySchema": [
-                    {
-                      "AttributeName": "id",
-                      "KeyType": "HASH"
-                    }
-                  ],
-                  "Projection": {
-                    "ProjectionType": "ALL"
-                  },
-                  "IndexStatus": "CREATING",
-                  "ProvisionedThroughput": {
-                    "NumberOfDecreasesToday": 0,
-                    "ReadCapacityUnits": 1,
-                    "WriteCapacityUnits": 1
-                  },
-                  "IndexSizeBytes": 0,
-                  "ItemCount": 0,
-                  "IndexArn": "arn:aws:dynamodb:us-east-1:845404844455:table/analytics-ftuqpkxjx5/index/DataIdIndex"
-                }
-              ]
-            }
-          }
-        }
-      ]
+      "name": null,
+      "arn": null,
+      "service": null,
+      "policy": null
     }
+  },
+  "budget-pipeline:analysisApi:iam": {
+    "instanceId": "ftuqpkxjx5-3xbz3trc",
+    "type": "aws-iam-role",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
+    "inputs": {
+      "name": "api-ftuqpkxjx5-30t04scp-iam-role",
+      "service": "apigateway.amazonaws.com"
+    },
+    "state": {
+      "name": null,
+      "arn": null,
+      "service": null,
+      "policy": null
+    }
+  },
+  "budget-pipeline:analysisApi:apig": {
+    "instanceId": "ftuqpkxjx5-n2gfmv0w",
+    "type": "aws-apigateway",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-apigateway",
+    "inputs": {
+      "name": "api-ftuqpkxjx5-30t04scp",
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-30t04scp-iam-role-ftuqpkxjx5-30t04scp",
+      "routes": {}
+    },
+    "state": {}
   }
 }
