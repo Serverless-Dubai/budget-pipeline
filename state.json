@@ -7,5 +7,53 @@
   },
   "budget-pipeline": {
     "instanceId": "ftuqpkxjx5-rt12yxi7"
+  },
+  "budget-pipeline:processData": {
+    "instanceId": "ftuqpkxjx5-m2s9k9d4",
+    "type": "aws-lambda",
+    "internallyManaged": false,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-lambda",
+    "inputs": {
+      "memory": 512,
+      "timeout": 10,
+      "handler": "data.process",
+      "root": "/Users/rob/source/kinesis-pipeline/code",
+      "name": "func-ftuqpkxjx5-m2s9k9d4"
+    },
+    "state": {
+      "memory": 512,
+      "timeout": 10,
+      "handler": "data.process",
+      "root": "/Users/rob/source/kinesis-pipeline/code",
+      "name": "func-ftuqpkxjx5-m2s9k9d4",
+      "arn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
+      "roleArn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
+      "defaultRole": {
+        "arn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
+        "service": "lambda.amazonaws.com",
+        "policy": {
+          "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        },
+        "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role"
+      }
+    }
+  },
+  "budget-pipeline:processData:defaultRole": {
+    "instanceId": "ftuqpkxjx5-9fq8o0cp",
+    "type": "aws-iam-role",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
+    "inputs": {
+      "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role",
+      "service": "lambda.amazonaws.com"
+    },
+    "state": {
+      "arn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role",
+      "service": "lambda.amazonaws.com",
+      "policy": {
+        "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role"
+    }
   }
 }

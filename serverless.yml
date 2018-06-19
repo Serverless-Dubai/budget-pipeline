@@ -9,3 +9,12 @@ inputTypes: # type descriptions for inputs that budget-pipeline expects to recei
     type: string
     required: true
     default: my-budget-pipeline
+
+components:
+  processData:
+    type: aws-lambda
+    inputs:
+      memory: 512
+      timeout: 10
+      handler: data.process
+      root: ${self.path}/code
