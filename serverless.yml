@@ -18,3 +18,13 @@ components:
       timeout: 10
       handler: data.process
       root: ${self.path}/code
+  processorApi:
+    type: rest-api
+    inputs:
+      gateway: aws-apigateway
+      routes:
+        /data: # routes begin with a slash
+          post: # HTTP method names are used to attach handlers
+            function: ${processData}
+            cors: true
+  

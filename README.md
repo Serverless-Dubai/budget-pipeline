@@ -22,6 +22,11 @@ Now we create our Lambda function and add it to our `serverless.yml` file.
 component itself. To separate the two, we place our lambda function underneath the
 `code` subdirectory.
 
+### Step 3
+We have a Lambda function and that's great, but right now we don't have any way to invoke it.
+
+Let's fix that by adding the rest-api component to our `serverless.yml` file.
+
 ## Deployment
 To deploy our component, run `components deploy`.
 

@@ -55,5 +55,83 @@
       },
       "name": "func-ftuqpkxjx5-m2s9k9d4-execution-role"
     }
+  },
+  "budget-pipeline:processorApi": {
+    "instanceId": "ftuqpkxjx5-t5qr39hk",
+    "type": "rest-api",
+    "internallyManaged": false,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/rest-api",
+    "inputs": {
+      "gateway": "aws-apigateway",
+      "routes": {
+        "/data": {
+          "post": {
+            "function": {
+              "arn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
+              "roleArn": "arn:aws:iam::845404844455:role/func-ftuqpkxjx5-m2s9k9d4-execution-role"
+            },
+            "cors": true
+          }
+        }
+      },
+      "name": "api-ftuqpkxjx5-t5qr39hk"
+    },
+    "state": {
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "url": "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/"
+    }
+  },
+  "budget-pipeline:processorApi:iam": {
+    "instanceId": "ftuqpkxjx5-fssv5ptb",
+    "type": "aws-iam-role",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
+    "inputs": {
+      "name": "api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "service": "apigateway.amazonaws.com"
+    },
+    "state": {
+      "arn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "service": "apigateway.amazonaws.com",
+      "policy": {
+        "arn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "name": "api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk"
+    }
+  },
+  "budget-pipeline:processorApi:apig": {
+    "instanceId": "ftuqpkxjx5-y2x54cdh",
+    "type": "aws-apigateway",
+    "internallyManaged": true,
+    "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-apigateway",
+    "inputs": {
+      "name": "api-ftuqpkxjx5-t5qr39hk",
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "routes": {
+        "data": {
+          "POST": {
+            "lambdaArn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
+            "cors": true
+          }
+        }
+      }
+    },
+    "state": {
+      "name": "api-ftuqpkxjx5-t5qr39hk",
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-t5qr39hk-iam-role-ftuqpkxjx5-t5qr39hk",
+      "routes": {
+        "data": {
+          "POST": {
+            "lambdaArn": "arn:aws:lambda:us-east-1:845404844455:function:func-ftuqpkxjx5-m2s9k9d4",
+            "cors": true
+          }
+        }
+      },
+      "id": "z79oylgvk2",
+      "url": "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/",
+      "urls": [
+        "https://z79oylgvk2.execute-api.us-east-1.amazonaws.com/dev/data"
+      ]
+    }
   }
 }
