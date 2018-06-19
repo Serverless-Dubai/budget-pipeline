@@ -1,0 +1,11 @@
+{
+  "$": {
+    "serviceId": "ftuqpkxjx5"
+  },
+  "kinesis-pipeline": {
+    "instanceId": "ftuqpkxjx5-qe6bus48"
+  },
+  "budget-pipeline": {
+    "instanceId": "ftuqpkxjx5-rt12yxi7"
+  }
+}
