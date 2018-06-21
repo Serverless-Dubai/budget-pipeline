@@ -80,7 +80,7 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
     "inputs": {
-      "name": "func-ftuqpkxjx5-6posf6l8-execution-role",
+      "name": "func-ftuqpkxjx5-lft61qme-execution-role",
       "service": "lambda.amazonaws.com"
     },
     "state": {
@@ -96,7 +96,7 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-iam-role",
     "inputs": {
-      "name": "api-ftuqpkxjx5-30t04scp-iam-role",
+      "name": "api-ftuqpkxjx5-q3hqlf8q-iam-role",
       "service": "apigateway.amazonaws.com"
     },
     "state": {
@@ -112,8 +112,8 @@
     "internallyManaged": true,
     "rootPath": "../../../../usr/local/lib/node_modules/serverless-components/registry/aws-apigateway",
     "inputs": {
-      "name": "api-ftuqpkxjx5-30t04scp",
-      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-30t04scp-iam-role-ftuqpkxjx5-30t04scp",
+      "name": "api-ftuqpkxjx5-q3hqlf8q",
+      "roleArn": "arn:aws:iam::845404844455:role/api-ftuqpkxjx5-q3hqlf8q-iam-role-ftuqpkxjx5-q3hqlf8q",
       "routes": {}
     },
     "state": {}
